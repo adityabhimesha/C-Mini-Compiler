@@ -1,6 +1,6 @@
 # C-Mini-Compiler
 
-##HOW TO RUN THE CODE
+HOW TO RUN THE CODE
 
 => Download Flex on your system
 
