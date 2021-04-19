@@ -1,0 +1,21 @@
+T0 = 9 * 6
+a = T0
+T1 = 9 * 6
+c = T1
+b = 0
+L0:
+T2 = 8 < 9
+T3 = not T2
+if T3 goto L1
+T4 = a + 1
+a = T4
+L2:
+T5 = 8 < 9
+T6 = not T5
+if T6 goto L3
+T7 = b + 9
+a = T7
+goto L2
+L3:
+goto L0
+L1:
