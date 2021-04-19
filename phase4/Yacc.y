@@ -318,11 +318,10 @@
 
 %type <NODE> Start block_end_flower block Multiple_stmts stmt
 %type <NODE> if_stmt Multiple_stmts_not_if elseif_else_empty stmt_without_if
-%type <NODE> expr_without_constants expr expr_or_empty closeflower
+%type <NODE> expr_without_constants expr  closeflower 
 %type <NODE> Assignment_stmt
 %type <NODE> while_stmt 
 %type <NODE> idid nc sc
-%type <NODE> expr_or_empty_with_semicolon_and_assignment  expr_or_empty_with_assignment_and_closed_parent
 
 %%
 
@@ -420,11 +419,6 @@ expr: 	nc													{$$ = $1;}
 		| expr T_not_equal expr								{push("!=");TAC();$$ = Construct_AST($1, $3, "!=");}
 		;
 
-expr_or_empty_with_semicolon_and_assignment: expr_or_empty T_Semicolon			{$$ = $1;}
-	| Assignment_stmt T_Semicolon												{$$ = $1;}
-
-expr_or_empty_with_assignment_and_closed_parent: expr_or_empty T_closedParanthesis							{$$ = $1;}
-	| Assignment_stmt T_closedParanthesis																	{$$ = $1;}
 
 idid : T_identifier										{push((char*)yylval.str);$$ = Construct_AST(NULL, NULL, (char*)yylval.str); }	//push in stack. This will be used to generate ICG. Also, create leaf node for AST.
 		;
@@ -433,9 +427,9 @@ sc 	 : T_stringLiteral									{push((char*)yylval.str);$$ = Construct_AST(NULL,
 nc	 : T_numericConstants								{push((char*)yylval.str);$$ = Construct_AST(NULL, NULL, (char*)yylval.str); }
 		;
 
-expr_or_empty: expr										{$$ = $1;}
-				| {$$ = Construct_AST(NULL, NULL, ";"); }
-				;
+// expr_or_empty: expr										{$$ = $1;}
+				// | {$$ = Construct_AST(NULL, NULL, ";"); }
+				// ;
 
 openflower: T_openFlowerBracket {};
 closeflower: T_closedFlowerBracket {};

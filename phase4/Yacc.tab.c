@@ -799,14 +799,14 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   329,   329,   333,   334,   339,   340,   341,   344,   345,
-     348,   349,   350,   352,   353,   357,   357,   357,   359,   359,
-     361,   361,   362,   362,   363,   363,   364,   367,   368,   371,
-     372,   373,   377,   378,   379,   380,   381,   382,   383,   388,
-     389,   390,   391,   392,   393,   394,   395,   396,   397,   398,
-     399,   400,   401,   405,   406,   407,   408,   409,   410,   411,
-     412,   413,   414,   415,   416,   417,   418,   419,   420,   429,
-     431,   433,   440,   441
+       0,   328,   328,   332,   333,   338,   339,   340,   343,   344,
+     347,   348,   349,   351,   352,   356,   356,   356,   358,   358,
+     360,   360,   361,   361,   362,   362,   363,   366,   367,   370,
+     371,   372,   376,   377,   378,   379,   380,   381,   382,   387,
+     388,   389,   390,   391,   392,   393,   394,   395,   396,   397,
+     398,   399,   400,   404,   405,   406,   407,   408,   409,   410,
+     411,   412,   413,   414,   415,   416,   417,   418,   419,   423,
+     425,   427,   434,   435
 };
 #endif
 
@@ -1844,433 +1844,433 @@ yyreduce:
     {
         case 2:
 /* Line 1792 of yacc.c  */
-#line 329 "Yacc.y"
+#line 328 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(6) - (6)].NODE);}
     break;
 
   case 3:
 /* Line 1792 of yacc.c  */
-#line 333 "Yacc.y"
+#line 332 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (2)].NODE);}
     break;
 
   case 4:
 /* Line 1792 of yacc.c  */
-#line 334 "Yacc.y"
+#line 333 "Yacc.y"
     {(yyval.NODE) = Construct_AST(NULL, NULL, ";"); }
     break;
 
   case 5:
 /* Line 1792 of yacc.c  */
-#line 339 "Yacc.y"
+#line 338 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(2) - (2)].NODE);}
     break;
 
   case 6:
 /* Line 1792 of yacc.c  */
-#line 340 "Yacc.y"
+#line 339 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE);}
     break;
 
   case 7:
 /* Line 1792 of yacc.c  */
-#line 341 "Yacc.y"
+#line 340 "Yacc.y"
     {(yyval.NODE) = Construct_AST(NULL, NULL, ";"); }
     break;
 
   case 8:
 /* Line 1792 of yacc.c  */
-#line 344 "Yacc.y"
+#line 343 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (2)].NODE);}
     break;
 
   case 9:
 /* Line 1792 of yacc.c  */
-#line 345 "Yacc.y"
+#line 344 "Yacc.y"
     {(yyval.NODE) = Construct_AST(NULL, NULL, ";"); }
     break;
 
   case 10:
 /* Line 1792 of yacc.c  */
-#line 348 "Yacc.y"
+#line 347 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (2)].NODE);  }
     break;
 
   case 11:
 /* Line 1792 of yacc.c  */
-#line 349 "Yacc.y"
+#line 348 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE);  }
     break;
 
   case 12:
 /* Line 1792 of yacc.c  */
-#line 350 "Yacc.y"
+#line 349 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE); }
     break;
 
   case 13:
 /* Line 1792 of yacc.c  */
-#line 352 "Yacc.y"
+#line 351 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (2)].NODE);  }
     break;
 
   case 14:
 /* Line 1792 of yacc.c  */
-#line 353 "Yacc.y"
+#line 352 "Yacc.y"
     {(yyval.NODE) = Construct_AST(NULL, NULL, ";"); }
     break;
 
   case 15:
 /* Line 1792 of yacc.c  */
-#line 357 "Yacc.y"
+#line 356 "Yacc.y"
     {While_Loop_Label();}
     break;
 
   case 16:
 /* Line 1792 of yacc.c  */
-#line 357 "Yacc.y"
+#line 356 "Yacc.y"
     {While_loop_cond();}
     break;
 
   case 17:
 /* Line 1792 of yacc.c  */
-#line 357 "Yacc.y"
+#line 356 "Yacc.y"
     {While_END();(yyval.NODE) = Construct_AST((yyvsp[(3) - (7)].str), (yyvsp[(5) - (7)].str), "While"); }
     break;
 
   case 18:
 /* Line 1792 of yacc.c  */
-#line 359 "Yacc.y"
+#line 358 "Yacc.y"
     {IFSTMT();}
     break;
 
   case 19:
 /* Line 1792 of yacc.c  */
-#line 359 "Yacc.y"
+#line 358 "Yacc.y"
     {(yyval.NODE) = Construct_AST((yyvsp[(3) - (7)].NODE), (yyvsp[(6) - (7)].NODE), "IF");}
     break;
 
   case 20:
 /* Line 1792 of yacc.c  */
-#line 361 "Yacc.y"
+#line 360 "Yacc.y"
     {;Elif();}
     break;
 
   case 21:
 /* Line 1792 of yacc.c  */
-#line 361 "Yacc.y"
+#line 360 "Yacc.y"
     {(yyval.NODE) = Construct_AST((yyvsp[(4) - (8)].NODE), (yyvsp[(7) - (8)].NODE), "ELSEIF"); }
     break;
 
   case 22:
 /* Line 1792 of yacc.c  */
-#line 362 "Yacc.y"
+#line 361 "Yacc.y"
     {if_else_cleanup();}
     break;
 
   case 23:
 /* Line 1792 of yacc.c  */
-#line 362 "Yacc.y"
+#line 361 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(3) - (3)].NODE);}
     break;
 
   case 24:
 /* Line 1792 of yacc.c  */
-#line 363 "Yacc.y"
+#line 362 "Yacc.y"
     {if_else_cleanup();}
     break;
 
   case 25:
 /* Line 1792 of yacc.c  */
-#line 363 "Yacc.y"
+#line 362 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(4) - (4)].NODE);}
     break;
 
   case 26:
 /* Line 1792 of yacc.c  */
-#line 364 "Yacc.y"
+#line 363 "Yacc.y"
     {if_else_cleanup(); (yyval.NODE) = Construct_AST(NULL, NULL, ";"); }
     break;
 
   case 27:
 /* Line 1792 of yacc.c  */
-#line 367 "Yacc.y"
+#line 366 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (2)].NODE);}
     break;
 
   case 28:
 /* Line 1792 of yacc.c  */
-#line 368 "Yacc.y"
+#line 367 "Yacc.y"
     {(yyval.NODE) = Construct_AST(NULL, NULL, ";"); }
     break;
 
   case 29:
 /* Line 1792 of yacc.c  */
-#line 371 "Yacc.y"
+#line 370 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (2)].NODE);}
     break;
 
   case 30:
 /* Line 1792 of yacc.c  */
-#line 372 "Yacc.y"
+#line 371 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (2)].NODE);}
     break;
 
   case 31:
 /* Line 1792 of yacc.c  */
-#line 373 "Yacc.y"
+#line 372 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE);}
     break;
 
   case 32:
 /* Line 1792 of yacc.c  */
-#line 377 "Yacc.y"
+#line 376 "Yacc.y"
     {push("=");TAC_assign();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE),(yyvsp[(3) - (3)].NODE),"=");}
     break;
 
   case 33:
 /* Line 1792 of yacc.c  */
-#line 378 "Yacc.y"
+#line 377 "Yacc.y"
     {push("se");TAC_assign();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE),(yyvsp[(3) - (3)].NODE),"SE"); }
     break;
 
   case 34:
 /* Line 1792 of yacc.c  */
-#line 379 "Yacc.y"
+#line 378 "Yacc.y"
     {push("=");strcpy(G_val,(yyvsp[(2) - (4)].NODE)->token);TAC_assign_back();insert_in_st((yyvsp[(1) - (4)].str), (yyvsp[(2) - (4)].NODE)->token, st[top], "j");(yyval.NODE) = Construct_AST((yyvsp[(2) - (4)].NODE),(yyvsp[(4) - (4)].NODE),"=");}
     break;
 
   case 35:
 /* Line 1792 of yacc.c  */
-#line 380 "Yacc.y"
+#line 379 "Yacc.y"
     {push("=");TAC_assign();insert_in_st((yyvsp[(1) - (4)].str), (yyvsp[(2) - (4)].NODE)->token, st[top], (yyvsp[(4) - (4)].NODE)->token);(yyval.NODE) = Construct_AST((yyvsp[(2) - (4)].NODE),(yyvsp[(4) - (4)].NODE),"=");}
     break;
 
   case 36:
 /* Line 1792 of yacc.c  */
-#line 381 "Yacc.y"
+#line 380 "Yacc.y"
     {push("=");TAC_assign();insert_in_st((yyvsp[(1) - (4)].str), (yyvsp[(2) - (4)].NODE)->token, st[top], (yyvsp[(4) - (4)].NODE)->token);(yyval.NODE) = Construct_AST((yyvsp[(2) - (4)].NODE),(yyvsp[(4) - (4)].NODE),"=");}
     break;
 
   case 37:
 /* Line 1792 of yacc.c  */
-#line 382 "Yacc.y"
+#line 381 "Yacc.y"
     {push("=");strcpy(G_val,(yyvsp[(2) - (4)].NODE)->token);TAC_assign_back();insert_in_st((yyvsp[(1) - (4)].str), (yyvsp[(2) - (4)].NODE)->token, st[top], "j");(yyval.NODE) = Construct_AST((yyvsp[(2) - (4)].NODE),(yyvsp[(4) - (4)].NODE),"=");}
     break;
 
   case 38:
 /* Line 1792 of yacc.c  */
-#line 383 "Yacc.y"
+#line 382 "Yacc.y"
     {push("=");TAC_assign();insert_in_st((yyvsp[(1) - (4)].str), (yyvsp[(2) - (4)].NODE)->token, st[top], (yyvsp[(4) - (4)].NODE)->token);(yyval.NODE) = Construct_AST((yyvsp[(2) - (4)].NODE),(yyvsp[(4) - (4)].NODE),"=");}
     break;
 
   case 39:
 /* Line 1792 of yacc.c  */
-#line 388 "Yacc.y"
+#line 387 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE);}
     break;
 
   case 40:
 /* Line 1792 of yacc.c  */
-#line 389 "Yacc.y"
+#line 388 "Yacc.y"
     {push("+");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "+");}
     break;
 
   case 41:
 /* Line 1792 of yacc.c  */
-#line 390 "Yacc.y"
+#line 389 "Yacc.y"
     {push("-");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "-");}
     break;
 
   case 42:
 /* Line 1792 of yacc.c  */
-#line 391 "Yacc.y"
+#line 390 "Yacc.y"
     {push("/");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "/");}
     break;
 
   case 43:
 /* Line 1792 of yacc.c  */
-#line 392 "Yacc.y"
+#line 391 "Yacc.y"
     {push("*");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "*");}
     break;
 
   case 44:
 /* Line 1792 of yacc.c  */
-#line 393 "Yacc.y"
+#line 392 "Yacc.y"
     {push("%");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "%");}
     break;
 
   case 45:
 /* Line 1792 of yacc.c  */
-#line 394 "Yacc.y"
+#line 393 "Yacc.y"
     {push("&");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "&");}
     break;
 
   case 46:
 /* Line 1792 of yacc.c  */
-#line 395 "Yacc.y"
+#line 394 "Yacc.y"
     {push("|");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "|");}
     break;
 
   case 47:
 /* Line 1792 of yacc.c  */
-#line 396 "Yacc.y"
+#line 395 "Yacc.y"
     {push("<");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "<");}
     break;
 
   case 48:
 /* Line 1792 of yacc.c  */
-#line 397 "Yacc.y"
+#line 396 "Yacc.y"
     {push("<=");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "<=");}
     break;
 
   case 49:
 /* Line 1792 of yacc.c  */
-#line 398 "Yacc.y"
+#line 397 "Yacc.y"
     {push(">");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), ">");}
     break;
 
   case 50:
 /* Line 1792 of yacc.c  */
-#line 399 "Yacc.y"
+#line 398 "Yacc.y"
     {push(">=");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), ">=");}
     break;
 
   case 51:
 /* Line 1792 of yacc.c  */
-#line 400 "Yacc.y"
+#line 399 "Yacc.y"
     {push("==");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "==");}
     break;
 
   case 52:
 /* Line 1792 of yacc.c  */
-#line 401 "Yacc.y"
+#line 400 "Yacc.y"
     {push("!=");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "!=");}
     break;
 
   case 53:
 /* Line 1792 of yacc.c  */
-#line 405 "Yacc.y"
+#line 404 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE);}
     break;
 
   case 54:
 /* Line 1792 of yacc.c  */
-#line 406 "Yacc.y"
+#line 405 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE);}
     break;
 
   case 55:
 /* Line 1792 of yacc.c  */
-#line 407 "Yacc.y"
+#line 406 "Yacc.y"
     {(yyval.NODE) = (yyvsp[(1) - (1)].NODE);}
     break;
 
   case 56:
 /* Line 1792 of yacc.c  */
-#line 408 "Yacc.y"
+#line 407 "Yacc.y"
     {push("+");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "+");}
     break;
 
   case 57:
 /* Line 1792 of yacc.c  */
-#line 409 "Yacc.y"
+#line 408 "Yacc.y"
     {push("-");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "-");}
     break;
 
   case 58:
 /* Line 1792 of yacc.c  */
-#line 410 "Yacc.y"
+#line 409 "Yacc.y"
     {push("/");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "/");}
     break;
 
   case 59:
 /* Line 1792 of yacc.c  */
-#line 411 "Yacc.y"
+#line 410 "Yacc.y"
     {push("*");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "*");}
     break;
 
   case 60:
 /* Line 1792 of yacc.c  */
-#line 412 "Yacc.y"
+#line 411 "Yacc.y"
     {push("%");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "%");}
     break;
 
   case 61:
 /* Line 1792 of yacc.c  */
-#line 413 "Yacc.y"
+#line 412 "Yacc.y"
     {push("&");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "&");}
     break;
 
   case 62:
 /* Line 1792 of yacc.c  */
-#line 414 "Yacc.y"
+#line 413 "Yacc.y"
     {push("|");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "|");}
     break;
 
   case 63:
 /* Line 1792 of yacc.c  */
-#line 415 "Yacc.y"
+#line 414 "Yacc.y"
     {push("<");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "<");}
     break;
 
   case 64:
 /* Line 1792 of yacc.c  */
-#line 416 "Yacc.y"
+#line 415 "Yacc.y"
     {push("<=");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "<=");}
     break;
 
   case 65:
 /* Line 1792 of yacc.c  */
-#line 417 "Yacc.y"
+#line 416 "Yacc.y"
     {push(">");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), ">");}
     break;
 
   case 66:
 /* Line 1792 of yacc.c  */
-#line 418 "Yacc.y"
+#line 417 "Yacc.y"
     {push(">=");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), ">=");}
     break;
 
   case 67:
 /* Line 1792 of yacc.c  */
-#line 419 "Yacc.y"
+#line 418 "Yacc.y"
     {push("==");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "==");}
     break;
 
   case 68:
 /* Line 1792 of yacc.c  */
-#line 420 "Yacc.y"
+#line 419 "Yacc.y"
     {push("!=");TAC();(yyval.NODE) = Construct_AST((yyvsp[(1) - (3)].NODE), (yyvsp[(3) - (3)].NODE), "!=");}
     break;
 
   case 69:
 /* Line 1792 of yacc.c  */
-#line 429 "Yacc.y"
+#line 423 "Yacc.y"
     {push((char*)yylval.str);(yyval.NODE) = Construct_AST(NULL, NULL, (char*)yylval.str); }
     break;
 
   case 70:
 /* Line 1792 of yacc.c  */
-#line 431 "Yacc.y"
+#line 425 "Yacc.y"
     {push((char*)yylval.str);(yyval.NODE) = Construct_AST(NULL, NULL, (char*)yylval.str); }
     break;
 
   case 71:
 /* Line 1792 of yacc.c  */
-#line 433 "Yacc.y"
+#line 427 "Yacc.y"
     {push((char*)yylval.str);(yyval.NODE) = Construct_AST(NULL, NULL, (char*)yylval.str); }
     break;
 
   case 72:
 /* Line 1792 of yacc.c  */
-#line 440 "Yacc.y"
+#line 434 "Yacc.y"
     {}
     break;
 
   case 73:
 /* Line 1792 of yacc.c  */
-#line 441 "Yacc.y"
+#line 435 "Yacc.y"
     {}
     break;
 
@@ -2508,7 +2508,7 @@ yyreturn:
 
 
 /* Line 2055 of yacc.c  */
-#line 444 "Yacc.y"
+#line 438 "Yacc.y"
 
 
 void yyerror(const char *str) 
