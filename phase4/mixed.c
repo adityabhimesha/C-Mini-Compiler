@@ -6,7 +6,7 @@
    
            int c = 7;
            a = 4 + 5;
-           while(b > 9){
+           while (b > 9){
                a = 4+5;
            }
             if(c && a){

@@ -64,6 +64,9 @@ def fold_constants(list_of_lines):
 def remove_dead_code(list_of_lines):
 	"""
 		Temporaries that are never assigned to any variable nor used in any expression are deleted. Done recursively.
+		if we have
+		t0 = t1 + 5
+		t2 = t0 + 5
 	"""
 	num_lines = len(list_of_lines)
 	temps_on_lhs = set()
@@ -116,6 +119,13 @@ def make_subexpression_dict(list_of_lines) :
 	return expressions
 
 def eliminate_common_subexpressions(list_of_lines) :
+
+	# a = b * c + g;
+	# d = b * c * e;
+
+	# tmp = b * c;
+	# a = tmp + g;
+	# d = tmp * e
     expressions = make_subexpression_dict(list_of_lines)
     print(expressions)
     lines = len(list_of_lines)
@@ -144,7 +154,7 @@ if __name__ == "__main__" :
 	printicg(list_of_lines, "ICG")
 	without_deadcode = remove_dead_code(list_of_lines)
 	printicg(without_deadcode, "Optimized ICG after removing dead code")
-	print("Eliminated", len(list_of_lines)-len(without_deadcode), "lines of code")
+	print("Eliminated", len(list_of_lines)-len(without_deadcode)-1, "lines of code")
 
 	print("\n -----------------------------------------")
 	printicg(without_deadcode, "ICG")

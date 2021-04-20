@@ -51,40 +51,37 @@ extern int yydebug;
      T_main = 260,
      T_type = 261,
      T_return = 262,
-     T_for = 263,
-     T_if = 264,
-     T_else = 265,
-     T_while = 266,
-     T_InputStream = 267,
-     T_OutputStream = 268,
-     T_openParenthesis = 269,
-     T_closedParanthesis = 270,
-     T_openFlowerBracket = 271,
-     T_closedFlowerBracket = 272,
-     T_RelationalOperator = 273,
-     T_LogicalOperator = 274,
-     T_UnaryOperator = 275,
-     T_AssignmentOperator = 276,
-     T_Semicolon = 277,
-     T_identifier = 278,
-     T_numericConstants = 279,
-     T_stringLiteral = 280,
-     T_character = 281,
-     T_plus = 282,
-     T_minus = 283,
-     T_mod = 284,
-     T_divide = 285,
-     T_multiply = 286,
-     T_whiteSpace = 287,
-     T_shortHand = 288,
-     T_LogicalOr = 289,
-     T_LogicalAnd = 290,
-     T_not_equal = 291,
-     T_equal_equal = 292,
-     T_greater_equal = 293,
-     T_greater = 294,
-     T_less_equal = 295,
-     T_less = 296
+     T_if = 263,
+     T_else = 264,
+     T_while = 265,
+     T_openParenthesis = 266,
+     T_closedParanthesis = 267,
+     T_openFlowerBracket = 268,
+     T_closedFlowerBracket = 269,
+     T_RelationalOperator = 270,
+     T_LogicalOperator = 271,
+     T_UnaryOperator = 272,
+     T_AssignmentOperator = 273,
+     T_Semicolon = 274,
+     T_identifier = 275,
+     T_numericConstants = 276,
+     T_stringLiteral = 277,
+     T_character = 278,
+     T_plus = 279,
+     T_minus = 280,
+     T_mod = 281,
+     T_divide = 282,
+     T_multiply = 283,
+     T_whiteSpace = 284,
+     T_shortHand = 285,
+     T_LogicalOr = 286,
+     T_LogicalAnd = 287,
+     T_not_equal = 288,
+     T_equal_equal = 289,
+     T_greater_equal = 290,
+     T_greater = 291,
+     T_less_equal = 292,
+     T_less = 293
    };
 #endif
 
@@ -93,14 +90,14 @@ extern int yydebug;
 typedef union YYSTYPE
 {
 /* Line 2058 of yacc.c  */
-#line 298 "Yacc.y"
+#line 297 "Yacc.y"
 
 	char *str;
 	struct ASTNode *NODE;
 
 
 /* Line 2058 of yacc.c  */
-#line 104 "Yacc.tab.h"
+#line 101 "Yacc.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

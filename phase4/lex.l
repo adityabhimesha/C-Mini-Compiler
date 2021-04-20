@@ -29,8 +29,6 @@ letter [A-Za-z_]
 "/*"[^*/]*"*/"					{;}
 
 
-alignas|alignof|and|and_eq|asm|atomic_cancel|atomic_commit|atomic_noexcept|bitand|bitor|break|case|catch|class|compl|concept|const|consteval|constexpr|constinit|const_cast|continue|co_await|co_return|co_yield|decltype|default|delete|do|dynamic_cast|enum|explicit|export|extern|false|friend|goto|inline|mutable|namespace|new|noexcept|not|not_eq|nullptr|operator|or|or_eq|private|protected|public|reflexpr|register|reinterpret_cast|requires|signed|sizeof|static|static_assert|static_cast|struct|switch|synchronized|template|this|thread_local|throw|true|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|xor|xor_e  {return T_keyword;}
-
 "if"																{return T_if ;}
 "else"																{return T_else ;}
 
@@ -39,12 +37,7 @@ alignas|alignof|and|and_eq|asm|atomic_cancel|atomic_commit|atomic_noexcept|bitan
 "auto"|"bool"|"char"|"char8_t"|"char16_t"|"char32_t"|"double"|"float"|"long"|"short" 	{yylval.str = strdup(yytext); return T_type ;}
 "return" 																{return T_return;}
 
-"for"							{return T_for;}
 "while"							{return T_while;}
-
-
-"<<"							{return T_InputStream ;}
-">>"							{return T_OutputStream ;}
 
 
 "("							  	{return T_openParenthesis ;}		  
@@ -166,6 +159,10 @@ void insert_in_st(char* type, char* id, int scp, char* value)
 			else if(strcmp(type, "long") == 0)
 			Symbol_Table[scp].arr[i].storage = 8;
 		}
+
+		// else{
+		// 	strcpy(Symbol_Table[scp].arr[i].value, value);
+		// }
 	}
 }
 

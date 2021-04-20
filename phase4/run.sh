@@ -1,3 +1,3 @@
-yacc -d --warning=none foryaac.y
+yacc -d --warning=none Yacc.y
 lex lex.l
-gcc -w foryaac.tab.c lex.yy.c
+gcc -w Yacc.tab.c lex.yy.c

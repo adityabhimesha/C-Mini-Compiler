@@ -1,34 +1,22 @@
-a = 4
-c = 9
+T0 = 9 * 6
+a = T0
+T1 = 9 * 6
+c = T1
 b = 0
-T0 = a < 5
-T1 = not T0
-if T1 goto L0
-T2 = a < 3
+L0:
+T2 = 8 < 9
 T3 = not T2
 if T3 goto L1
-e = 5
-L1:
-b = 6
+T4 = 1 / 6
+T5 = 9 + T4
+a = T5
 L2:
-T4 = 8 < 9
-T5 = not T4
-if T5 goto L3
-T6 = a + 1
-a = T6
-L4:
-T7 = a < 10
-T8 = not T7
-if T8 goto L5
-T9 = b + 9
-a = T9
-goto L4
-L5:
+T6 = 8 < 9
+T7 = not T6
+if T7 goto L3
+T8 = b + 9
+a = T8
 goto L2
 L3:
-T10 = b < 5
-L0:
-T11 = not T10
-if T11 goto L6
-d = 4
-L6:
+goto L0
+L1:

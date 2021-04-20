@@ -23,13 +23,12 @@
 	int label[20];
 	int lnum = 0;				//current available label number.
 	int ltop = 0;
-	// int abcd = 0;
+	
 	int l_while=0;
-	// int l_for=0;
-	// int flag_set = 1;
+
 	int stop = -1;				//top of stack
 	char G_val[10];
-	//FILE* ast_tree_output;
+
 
 
 	typedef struct quadruples
@@ -109,7 +108,7 @@
 	    Q[quadindex].op = (char*)malloc(sizeof(char)*6);		//a label's quad 	
 	    Q[quadindex].arg1 = NULL;
 	    Q[quadindex].arg2 = NULL;
-	    Q[quadindex].res = (char*)malloc(sizeof(char)*(lnum + 2));   //lum + 2 is a safe way to have enough space for L0, L1, ... etc. 
+	    Q[quadindex].res = (char*)malloc(sizeof(char)*(3));   //lum + 2 is a safe way to have enough space for L0, L1, ... etc. 
 	    strcpy(Q[quadindex].op,"Label");
 	    char x[10];
 		x[0] = '0' + label[ltop - 1];
@@ -162,7 +161,7 @@
 		Q[quadindex].op = (char*)malloc(sizeof(char)*5);
 	    Q[quadindex].arg1 = NULL;
 	    Q[quadindex].arg2 = NULL;
-	    Q[quadindex].res = (char*)malloc(sizeof(char)*(l_while+2));
+	    Q[quadindex].res = (char*)malloc(sizeof(char)*(3));
 	    strcpy(Q[quadindex].op,"goto");
 	    char x[10];
 	    sprintf(x,"%d",label[ltop]);
@@ -302,9 +301,8 @@
 
 %error-verbose
 
-// %define parse.error verbose
 
-%token <str> T_keyword T_int T_main T_type T_return T_for T_if T_else T_while T_InputStream T_OutputStream 
+%token <str> T_keyword T_int T_main T_type T_return  T_if T_else T_while  
 %token <str> T_openParenthesis T_closedParanthesis T_openFlowerBracket T_closedFlowerBracket 
 %token <str> T_RelationalOperator T_LogicalOperator T_UnaryOperator 
 %token <str> T_AssignmentOperator  T_Semicolon T_identifier T_numericConstants T_stringLiteral
@@ -318,10 +316,8 @@
 
 %type <NODE> Start block_end_flower block Multiple_stmts stmt
 %type <NODE> if_stmt Multiple_stmts_not_if elseif_else_empty stmt_without_if
-%type <NODE> expr_without_constants expr  closeflower 
-%type <NODE> Assignment_stmt
-%type <NODE> while_stmt 
-%type <NODE> idid nc sc
+%type <NODE> expr_without_constants expr  closeflower Assignment_stmt while_stmt  idid nc sc
+
 
 %%
 
@@ -446,21 +442,14 @@ void symboldisplay()
 {
 	printf("%s",LineBreaker);
 	printf("Quadruplets\n");
+	printf("\toperand \t op1 \t\t op2 \t\t res \n");
 	for(int i=0;i<quadindex;i++)
     {
-        printf("%-8s \t %-8s \t %-8s \t %-6s \n",Q[i].op,Q[i].arg1,Q[i].arg2,Q[i].res);
+        printf("\t%-8s \t %-8s \t %-8s \t %-6s \n",Q[i].op,Q[i].arg1,Q[i].arg2,Q[i].res);
     }
 	printf("%s",LineBreaker);
 }
 
-int isDigit(char* in)
-{
-	for(int i = 0; i < strlen(in); ++i)
-	{
-		if(!isdigit(in[i])) return 0;
-	}
-	return 1;
-}
 
 int main()
 {
