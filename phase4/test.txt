@@ -3,6 +3,7 @@ a = T0
 T1 = 9 * 6
 c = T1
 b = 0
+e = 0
 L0:
 T2 = 8 < 9
 T3 = not T2
@@ -10,13 +11,18 @@ if T3 goto L1
 T4 = 1 / 6
 T5 = 9 + T4
 a = T5
-L2:
-T6 = 8 < 9
+T6 = a > 3
 T7 = not T6
-if T7 goto L3
-T8 = b + 9
-a = T8
-goto L2
+if T7 goto L2
+e = 5
+L2:
 L3:
+T8 = 8 < 9
+T9 = not T8
+if T9 goto L4
+T10 = b + 9
+a = T10
+goto L3
+L4:
 goto L0
 L1:

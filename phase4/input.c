@@ -3,11 +3,12 @@ int main()
     int a = 4;
     int c = 9;
     int b = 7 + 9;
+    int e = 0;
     if(a < 5)
     {
         if(a < 3)
         {
-            int e = 5;
+            e = 5;
         }
        long b = 7 + 9;
         while( ){

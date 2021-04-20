@@ -2515,7 +2515,7 @@ void symboldisplay()
 {
 	printf("%s",LineBreaker);
 	printf("Quadruplets\n");
-	printf("\toperand \t op1 \t\t op2 \t\t res \n");
+	printf("\toperator \t op1 \t\t op2 \t\t res \n");
 	for(int i=0;i<quadindex;i++)
     {
         printf("\t%-8s \t %-8s \t %-8s \t %-6s \n",Q[i].op,Q[i].arg1,Q[i].arg2,Q[i].res);

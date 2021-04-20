@@ -1,24 +1,20 @@
+
 int main()
 {
-    int a = 4;
-    int c = 1;
+    int a = 9 * 6;
+    int c = 9 * 6;
     int b = 0;
-    int a = c;
-   
-    while(a <= b)
-    {
-
-        if(a >= c)
+    int e = 0;
+    
+    while(8 < 9  ){
+        a = 9 + 1 / 6;
+         if(a > 3)
         {
-            while(1)
-            {
-
-            }
+            e = 5;
         }
-
+        while(8 < 9){
+            a = b + 9;
+        }
     }
-
-   
-
-
+    
 }

@@ -1,16 +1,18 @@
+
 int main()
 {
-    int a = 4;
-    int i = 1;
-    while(i<10)
-    {
-        int b = 6;
-        while(b < )     
-        {
-            int c = 7;
-            if(c == 6)
-                long d = 4*8;
+    int a = 9 * 6;
+    int c = 9 * 6;
+    int b = 0;
+    int e = 0;
+    
+    while(8 < 9  ){
+        a = 9 + 1 / 6;
+       
+        
+        while(8 < 9){
+            a = b + 9;
         }
-        i = i + 1;
     }
+    
 }
